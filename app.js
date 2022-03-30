@@ -24,3 +24,11 @@ console.log(anchorsInParagraphs);
 for (let links of anchorsInParagraphs) {
   console.log(links.href);
 }
+
+//Innertext vs Text Content vs InnerHTML
+//Innertext is all text
+//InnerHtml changes the actual markup
+
+const headerUpdate = (document.querySelector("h1").innerHTML =
+  "<i>Silkie Chickens</i>");
+document.querySelector("h1").innerHTML += "<sup>The best chickens around</sup>";
