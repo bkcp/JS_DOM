@@ -32,3 +32,12 @@ for (let links of anchorsInParagraphs) {
 const headerUpdate = (document.querySelector("h1").innerHTML =
   "<i>Silkie Chickens</i>");
 document.querySelector("h1").innerHTML += "<sup>The best chickens around</sup>";
+
+//Setting attributes
+const firstLink = document.querySelector("a");
+firstLink.setAttribute("href", "http://www.google.com");
+
+const changeType = document.querySelector('input[type = "text"]');
+changeType.type = "password";
+changeType.type = "color";
+changeType.setAttribute("type", "text");
