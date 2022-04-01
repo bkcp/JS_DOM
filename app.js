@@ -41,3 +41,19 @@ const changeType = document.querySelector('input[type = "text"]');
 changeType.type = "password";
 changeType.type = "color";
 changeType.setAttribute("type", "text");
+
+//CSS styles, this changes the styles inline. not a best practice.
+const h1 = document.querySelector("h1");
+h1.style.color = "red";
+h1.style.fontSize = "3em";
+h1.style.border = "2px solid blue";
+
+const links = document.querySelectorAll("a");
+for (let link of links) {
+  link.style.color = "rgb(0,109,134";
+  link.style.textDecorationColor = "magenta";
+  link.style.textDecorationStyle = "wavy";
+}
+
+//to find out the current style being displayed pass in the element to window.getComputedStyle()
+console.log(window.getComputedStyle(h1));
