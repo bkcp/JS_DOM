@@ -59,8 +59,18 @@ for (let link of links) {
 console.log(window.getComputedStyle(h1));
 
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-const spans = document.querySelectorAll("span");
+const spans = document.querySelectorAll(".rainbow span");
 
 for (let i = 0; i < spans.length; i++) {
   spans[i].style.color = colors[i];
 }
+
+//Adding multiple classes to elements
+const h2 = document.querySelector("h2");
+h2.classList.add("purple");
+h2.classList.add("border");
+h2.classList.remove("purple");
+//to see what is already added
+console.log(h2.classList.contains("purple"));
+//toggle
+h2.classList.toggle("purple");
