@@ -78,7 +78,6 @@ console.log(h2.classList.contains("purple"));
 h2.classList.toggle("purple");
 
 //Navigating Parent Child relationships
-
 let divs = document.querySelector("div.rainbow");
 console.log(divs.childElementCount);
 console.log(divs.children);
@@ -89,3 +88,32 @@ console.log(squareImg.parentElement);
 console.log(squareImg.nextElementSibling);
 //nextSibling is just anything that comes next..text..blank space ect.
 console.log(squareImg.nextSibling);
+
+//Appending Children
+const newImg = document.createElement("img");
+newImg.src =
+  "https://cdnb.artstation.com/p/assets/images/images/016/804/553/medium/german-reina-3.jpg?1553541939";
+
+newImg.classList.add("square");
+
+document.body.appendChild(newImg);
+
+const newH3 = document.createElement("h3");
+newH3.innerText = "I am NEW";
+document.body.appendChild(newH3);
+//append vs prepend
+const newP = document.createElement("p");
+newP.append("just some text  ", " another set of text  ", "even more");
+newP.prepend("this comes first ");
+document.body.appendChild(newP);
+
+const newB = document.createElement("b");
+newB.append("HI  ");
+newP.prepend(newB);
+
+//insertAdjacentElement
+
+const newH2 = document.createElement("h2");
+newH2.append(" this is coming inbetween other elements");
+const firstH1 = document.querySelector("h1");
+firstH1.insertAdjacentElement("afterend", newH2);
