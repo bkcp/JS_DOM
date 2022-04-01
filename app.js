@@ -1,3 +1,5 @@
+//HTML ELEMENTS LOOK LIKE ARRAYS BUT DONT HAVE METHODS. THEY ARE ITERABLE AND HAVE INDICES THO
+
 const allImages = document.getElementsByTagName("img");
 for (let img of allImages) {
   console.log(img.src);
@@ -74,3 +76,16 @@ h2.classList.remove("purple");
 console.log(h2.classList.contains("purple"));
 //toggle
 h2.classList.toggle("purple");
+
+//Navigating Parent Child relationships
+
+let divs = document.querySelector("div.rainbow");
+console.log(divs.childElementCount);
+console.log(divs.children);
+console.log(divs.children[0]);
+
+let squareImg = document.querySelector(".square");
+console.log(squareImg.parentElement);
+console.log(squareImg.nextElementSibling);
+//nextSibling is just anything that comes next..text..blank space ect.
+console.log(squareImg.nextSibling);
