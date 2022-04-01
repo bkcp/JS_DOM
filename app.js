@@ -89,7 +89,7 @@ console.log(squareImg.nextElementSibling);
 //nextSibling is just anything that comes next..text..blank space ect.
 console.log(squareImg.nextSibling);
 
-//Appending Children
+//Appending and Removing Children
 const newImg = document.createElement("img");
 newImg.src =
   "https://cdnb.artstation.com/p/assets/images/images/016/804/553/medium/german-reina-3.jpg?1553541939";
@@ -101,6 +101,19 @@ document.body.appendChild(newImg);
 const newH3 = document.createElement("h3");
 newH3.innerText = "I am NEW";
 document.body.appendChild(newH3);
+
+//REMOVE  OG STYLE
+const newH3a = document.createElement("h3");
+newH3a.innerText = "I am removed";
+document.body.appendChild(newH3a);
+document.body.removeChild(newH3a);
+
+//REMOVE newSTYLE
+const newH3b = document.createElement("h3");
+newH3b.innerText = "I am removed";
+document.body.appendChild(newH3b);
+newH3b.remove();
+
 //append vs prepend
 const newP = document.createElement("p");
 newP.append("just some text  ", " another set of text  ", "even more");
@@ -117,3 +130,6 @@ const newH2 = document.createElement("h2");
 newH2.append(" this is coming inbetween other elements");
 const firstH1 = document.querySelector("h1");
 firstH1.insertAdjacentElement("afterend", newH2);
+
+//POKEMON CHALLENGE
+// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
