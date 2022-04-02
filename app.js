@@ -133,3 +133,28 @@ firstH1.insertAdjacentElement("afterend", newH2);
 
 //POKEMON CHALLENGE
 // https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
+
+const heading = document.createElement("h1");
+heading.innerText = "THESE ARE MY POKEMON!!!";
+document.body.append(heading);
+const section = document.createElement("section");
+section.setAttribute("id", "container");
+document.body.append(section);
+
+const container = document.querySelector("#container");
+const baseURL =
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+for (let i = 1; i < 159; i++) {
+  const div = document.createElement("div");
+  div.setAttribute("id", `pokemon${i}`);
+  div.classList.add("pokemonSection");
+  const pokemon = document.createElement("img");
+  pokemon.classList.add("pokemonImg");
+  pokemon.src = ` ${baseURL}${i}.png`;
+  div.append(pokemon);
+  const num = document.createElement("span");
+  num.innerText = `#${i}`;
+  num.classList.add("pokeNums");
+  div.append(num);
+  section.append(div);
+}

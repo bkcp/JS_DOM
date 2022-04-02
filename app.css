@@ -38,3 +38,16 @@ h1 {
 .tocnumber {
   color: black;
 }
+img {
+  background-color: transparent;
+}
+
+.pokemonSection {
+  display: inline-block;
+  text-align: center;
+}
+.pokemonImg {
+  display: block;
+}
+.pokeNums {
+}
