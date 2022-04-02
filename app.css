@@ -56,3 +56,17 @@ img {
   width: 100px;
   height: 100px;
 }
+#buttonContainer button {
+  /* display: inline; */
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+#buttonContainer p {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border: black solid 1px;
+}

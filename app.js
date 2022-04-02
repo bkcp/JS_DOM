@@ -204,9 +204,9 @@ const colorButton = document.querySelector("#colorButton");
 const swatch = document.querySelector("#swatch");
 
 colorButton.addEventListener("click", () => {
-  const rndColor = makeRndColor();
-  swatch.style.backgroundColor = rndColor;
-  hue.innerText = rndColor;
+  //   const rndColor = makeRndColor();
+  swatch.style.backgroundColor = makeRndColor();
+  hue.innerText = makeRndColor();
 });
 
 const makeRndColor = () => {
@@ -215,3 +215,22 @@ const makeRndColor = () => {
   const b = Math.floor(Math.random() * 255);
   return `rgb(${r},${g},${b})`;
 };
+
+//Rndom button color
+
+const rndButton = document.querySelectorAll("#buttonContainer button");
+for (let each of rndButton) {
+  each.addEventListener("click", () => {
+    each.style.backgroundColor = makeRndColor();
+  });
+}
+//Inside of an event, The keyword THIS refers to whatever element was triggered
+
+const thisButton = document.querySelectorAll("#buttonContainer p");
+for (let each of thisButton) {
+  each.addEventListener("click", colorize);
+}
+
+function colorize() {
+  this.style.backgroundColor = makeRndColor();
+}
