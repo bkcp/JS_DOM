@@ -158,3 +158,60 @@ for (let i = 1; i < 159; i++) {
   div.append(num);
   section.append(div);
 }
+
+//EVENTS
+//onClick
+const v2Button = document.querySelector("#V2");
+v2Button.onclick = function () {
+  console.log("You clicked me!");
+  console.log("great job Brock");
+};
+
+function scream() {
+  console.log("aaaaaah");
+}
+v2Button.onmouseenter = scream;
+
+function yell() {
+  console.log("thank god..");
+}
+v2Button.onmouseleave = yell;
+
+const v3Button = document.querySelector("#V3");
+
+//addEventListener
+v3Button.addEventListener("click", function () {
+  alert("CLICKED!");
+});
+v3Button.addEventListener("mouseup", () => {
+  console.log("mouseUP");
+});
+
+function twist() {
+  console.log("twist");
+}
+function shout() {
+  console.log("shout");
+}
+const tasButton = document.querySelector("#tas");
+
+tasButton.addEventListener("click", twist);
+tasButton.addEventListener("click", shout);
+
+//color challenge
+const hue = document.querySelector("#hue");
+const colorButton = document.querySelector("#colorButton");
+const swatch = document.querySelector("#swatch");
+
+colorButton.addEventListener("click", () => {
+  const rndColor = makeRndColor();
+  swatch.style.backgroundColor = rndColor;
+  hue.innerText = rndColor;
+});
+
+const makeRndColor = () => {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  return `rgb(${r},${g},${b})`;
+};
