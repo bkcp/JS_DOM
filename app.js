@@ -224,8 +224,8 @@ for (let each of rndButton) {
     each.style.backgroundColor = makeRndColor();
   });
 }
-//Inside of an event, The keyword THIS refers to whatever element was triggered
 
+//Inside of an event, The keyword THIS refers to whatever element was triggered
 const thisButton = document.querySelectorAll("#buttonContainer p");
 for (let each of thisButton) {
   each.addEventListener("click", colorize);
@@ -234,3 +234,30 @@ for (let each of thisButton) {
 function colorize() {
   this.style.backgroundColor = makeRndColor();
 }
+
+//KEYPRESSES
+const btnKlik = document.querySelector("#btnKlik");
+btnKlik.addEventListener("click", (evt) => {
+  console.log(evt);
+});
+
+const input = document
+  .querySelector("#input")
+  .addEventListener("keydown", (e) => {
+    console.log(e);
+    console.log(e.key);
+    console.log(e.code);
+  });
+
+window.addEventListener("keydown", (e) => {
+  switch (e.code) {
+    case "ArrowUp":
+      console.log("arrow up");
+      break;
+    case "ArrowDown":
+      console.log("arrow Down");
+      break;
+    default:
+      console.log("Ignored");
+  }
+});
