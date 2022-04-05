@@ -274,3 +274,15 @@ window.addEventListener("keyup", (e) => {
       console.log("Ignored off");
   }
 });
+
+const form = document.querySelector("#shelterForm");
+const formInput = document.querySelector("#catName");
+const catList = document.querySelector("#cats");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const newCat = document.createElement("li");
+  newCat.innerText = formInput.value;
+  catList.appendChild(newCat);
+  formInput.value = "";
+  console.log("submitted");
+});
