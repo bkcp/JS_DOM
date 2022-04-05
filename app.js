@@ -275,6 +275,8 @@ window.addEventListener("keyup", (e) => {
   }
 });
 
+//PReventing form default behaviors and using the event to update a list with the form input.
+
 const form = document.querySelector("#shelterForm");
 const formInput = document.querySelector("#catName");
 const catList = document.querySelector("#cats");
@@ -285,4 +287,17 @@ form.addEventListener("submit", function (e) {
   catList.appendChild(newCat);
   formInput.value = "";
   console.log("submitted");
+});
+const groceryForm = document.querySelector("#form");
+const productInput = document.querySelector("#product");
+const qtyInput = document.querySelector("#qty");
+const groceryList = document.querySelector("#groceryList");
+
+groceryForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const newProduct = document.createElement("li");
+  newProduct.innerText = qtyInput.value + " " + productInput.value;
+  groceryList.append(newProduct);
+  qtyInput.value = "";
+  productInput.value = "";
 });
