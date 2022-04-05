@@ -252,12 +252,25 @@ const input = document
 window.addEventListener("keydown", (e) => {
   switch (e.code) {
     case "ArrowUp":
-      console.log("arrow up");
+      console.log("arrow up on");
       break;
     case "ArrowDown":
-      console.log("arrow Down");
+      console.log("arrow Down on");
       break;
     default:
-      console.log("Ignored");
+      console.log("Ignored on");
+  }
+});
+
+window.addEventListener("keyup", (e) => {
+  switch (e.key) {
+    case "ArrowUp":
+      console.log("arrow up off");
+      break;
+    case "ArrowDown":
+      console.log("arrow down off");
+      break;
+    default:
+      console.log("Ignored off");
   }
 });
