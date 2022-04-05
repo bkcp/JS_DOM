@@ -301,3 +301,18 @@ groceryForm.addEventListener("submit", function (e) {
   qtyInput.value = "";
   productInput.value = "";
 });
+
+const liveUpdate = document.querySelector("#liveUpdate");
+//triggers when you click off of an element after it had been changed
+const changeInput = document.querySelector("#change");
+changeInput.addEventListener("change", function (e) {
+  console.log("it Changed!!");
+  console.log(e);
+});
+//triggers on any new input
+const inputInput = document.querySelector("#change");
+inputInput.addEventListener("input", function (e) {
+  console.log("input detected");
+  liveUpdate.innerText = inputInput.value;
+  console.log(e);
+});
