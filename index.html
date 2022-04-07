@@ -177,7 +177,30 @@
             <label for="form">New Form</label>
             <input type="text" name="form" id="change">
         </form>
+
+        <!-- both the button and the paragraph will trigger when the button is clicked -->
+        <h1>Bubble Events</h1>
+        <p onclick='alert("you clicked the paragraph")'>
+            THis is a paragraph
+            <button onclick="alert('you cliked the button')">Clikit</button>
+        </p>
+
+
+        <!--Only the button alert is triggered because e.stopPropagation() ends the bubble of events -->
+        <h1>Bubble Events #2</h1>
+        <p onclick='alert("you clicked the paragraph")'>
+            THis is a paragraph
+            <button id="alertBtn">Clikit</button>
+        </p>
+
+
+
+
+
+
         <script src="app.js"></script>
     </body>
+
+
 
 </html>

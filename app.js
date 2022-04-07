@@ -316,3 +316,10 @@ inputInput.addEventListener("input", function (e) {
   liveUpdate.innerText = inputInput.value;
   console.log(e);
 });
+
+//e.StopPropagation keeps parent event listeners from triggering.
+const singleAlertBtn = document.querySelector("#alertBtn");
+singleAlertBtn.addEventListener("click", (e) => {
+  alert("you cliky da button");
+  e.stopPropagation();
+});
