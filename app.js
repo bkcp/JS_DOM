@@ -323,3 +323,21 @@ singleAlertBtn.addEventListener("click", (e) => {
   alert("you cliky da button");
   e.stopPropagation();
 });
+
+//event Delegation
+//inside an event (e), the target attribute refers to the exact element the event occured on.
+//this lets you be much more specific.
+const thingBtn = document.querySelector("#submitThing");
+const thing = document.querySelector("#thing1");
+const thingList = document.querySelector("#thingList");
+submitThing.addEventListener("click", (e) => {
+  e.preventDefault();
+  const newThing = document.createElement("li");
+  newThing.innerText = thing.value;
+  thingList.appendChild(newThing);
+  thing.value = "";
+  console.log(e);
+});
+thingList.addEventListener("click", (e) => {
+  e.target.localName === "li" && e.target.remove();
+});
